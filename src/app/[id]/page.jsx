@@ -5,7 +5,7 @@ import Image from "next/image";
 
 async function getData(id) {
   const res = await fetch(
-    `https://handcrafted-group2.vercel.app//api/items/${id}`
+    `https://handcrafted-group2.vercel.app/api/items/${id}`
   );
   if (!res.ok) {
     throw new Error(`Error fetching data for item ${id}`);
@@ -70,7 +70,7 @@ export default function ItemDetails({ params }) {
 
     try {
       const response = await fetch(
-        "https://handcrafted-group2.vercel.app//api/reviews",
+        "https://handcrafted-group2.vercel.app/api/reviews",
         {
           method: "POST",
           headers: {

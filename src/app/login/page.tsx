@@ -10,7 +10,7 @@ export default function Login() {
     console.log(form_values.password);
 
     const result = await fetch(
-      "https://handcrafted-group2.vercel.app//api/users"
+      "https://handcrafted-group2.vercel.app/api/users"
     );
 
     if (!result.ok) {
