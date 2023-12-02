@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/users");
+  const res = await fetch("https://handcrafted-group2.vercel.app//api/users");
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

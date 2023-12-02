@@ -4,7 +4,7 @@ import ProductList from "../components/ProductList";
 import ProductFilter from "../components/Filter";
 
 async function getData() {
-  const data = await fetch("http://localhost:3000/api/items");
+  const data = await fetch("https://handcrafted-group2.vercel.app//api/items");
   if (!data.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -52,7 +52,7 @@ export default function Shop() {
     <div className="mx-auto max-w-4xl mt-4 bg-gradient-to-tr from-blue-900 to-black p-3">
       <div className="my-5 flex flex-col gap-4">
         <h1 className="text-white text-3xl font-bold">Products List</h1>
-        
+
         <ProductFilter onFilterChange={handleFilterChange} />
       </div>
       <ProductList products={filteredProducts} />
