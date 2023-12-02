@@ -59,7 +59,7 @@ const SignUpForm: React.FC = () => {
     try {
       // Check if username already exists
       const usernameExistsResponse = await fetch(
-        `/api/users?username=${username}`
+        `https://handcrafted-group2.vercel.app/api/users?username=${username}`
       );
 
       if (!usernameExistsResponse.ok) {
@@ -92,13 +92,25 @@ const SignUpForm: React.FC = () => {
       }
 
       // If the username is unique, create user
-      const response = await fetch("/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password, userType, email, address, city, phone, photo }),
-      });
+      const response = await fetch(
+        "https://handcrafted-group2.vercel.app/api/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            password,
+            userType,
+            email,
+            address,
+            city,
+            phone,
+            photo,
+          }),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
