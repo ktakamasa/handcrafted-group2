@@ -59,7 +59,7 @@ const SignUpForm: React.FC = () => {
     try {
       // Check if username already exists
       const usernameExistsResponse = await fetch(
-        `/api/users?username=${username}`
+        `https://handcrafted-group2.vercel.app/api/users?username=${username}`
       );
 
       if (!usernameExistsResponse.ok) {

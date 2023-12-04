@@ -53,7 +53,7 @@ const LoginForm = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://handcrafted-group2.vercel.app/api/login",
+        "https://handcrafted-group2.vercel.app//api/login",
         {
           method: "POST",
           headers: {

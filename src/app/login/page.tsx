@@ -9,7 +9,9 @@ export default function Login() {
     console.log(form_values.username);
     console.log(form_values.password);
 
-    const result = await fetch("/api/users");
+    const result = await fetch(
+      "https://handcrafted-group2.vercel.app/api/users"
+    );
 
     if (!result.ok) {
       throw new Error("Failed to fetch data");

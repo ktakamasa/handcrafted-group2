@@ -8,7 +8,9 @@ const Hero = () => {
 
   const fetchRandomItem = async () => {
     try {
-      const response = await fetch("/api/items"); // Update the endpoint as needed
+      const response = await fetch(
+        "https://handcrafted-group2.vercel.app/api/items"
+      ); // Update the endpoint as needed
 
       if (response.ok) {
         const items = await response.json();

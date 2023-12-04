@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 async function getData(id) {
-  const res = await fetch(`/api/items/${id}`);
+  const res = await fetch(
+    `https://handcrafted-group2.vercel.app/api/items/${id}`
+  );
   if (!res.ok) {
     throw new Error(`Error fetching data for item ${id}`);
   }
