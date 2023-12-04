@@ -4,7 +4,7 @@ import ProductList from "../components/ProductList";
 import ProductFilter from "../components/Filter";
 
 async function getData() {
-  const data = await fetch("https://handcrafted-group2.vercel.app/api/items");
+  const data = await fetch("/api/items");
   if (!data.ok) {
     throw new Error("Failed to fetch data");
   }
